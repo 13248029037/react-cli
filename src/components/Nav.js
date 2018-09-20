@@ -3,8 +3,6 @@ import { Menu, Icon } from 'antd';
 import { observer, inject } from 'mobx-react'
 import PropTypes from "prop-types";
 import styles from '../less/Nav.less';
-import classNames from 'classnames/bind'
-const cx = classNames.bind(styles);
 const SubMenu = Menu.SubMenu;
 @inject('Setting')
 @observer
@@ -22,7 +20,7 @@ export default class Nav extends Component {
             path: ''
         }
     }
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.getPath();  //获取当前导航的信息
     }
     componentDidMount() {
@@ -32,7 +30,7 @@ export default class Nav extends Component {
             })
         }
     }
-    componentWillReceiveProps(nextProps, context) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         this.getPath();  //获取当前导航的信息
         if (nextProps.Setting.getCollaps) { //如果当前的状态是collaps,就对导航张开显示解绑props
             this.setState({

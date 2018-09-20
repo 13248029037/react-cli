@@ -1,7 +1,5 @@
 import { observable, computed, action } from "mobx";
 
-
-
 class Store {
     // 基本设置
     @observable state = {
@@ -16,6 +14,4 @@ class Store {
 }
 
 export default new Store()
-
-
 

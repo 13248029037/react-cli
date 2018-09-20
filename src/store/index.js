@@ -1,7 +1,5 @@
 import { observable, computed, action } from "mobx";
 
-
-
 class Store {
     // 利用
     @observable state = {
@@ -14,7 +12,7 @@ class Store {
     }
 
     @action setTodos() {
-        new Promise((resolve, reject) => {
+        new Promise((resolve) => {
             setTimeout(function () {
                 resolve(Math.random() * 10)
             }, 3000)
@@ -30,6 +28,4 @@ class Store {
 }
 
 export default new Store()
-
-
 

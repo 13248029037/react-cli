@@ -12,18 +12,19 @@ export default class Layout extends Component {
         }
         this.resize = this.resize.bind(this)
     }
+    UNSAFE_componentWillMount() {
+        window.addEventListener('resize', this.resize)
+    }
+    componentDidMount() {
+        this.resize()
+    }
     resize() {
         let height = window.document.documentElement.offsetHeight;
         this.setState({
             height: height + 'px'
         })
     }
-    componentWillMount() {
-        window.addEventListener('resize', this.resize)
-    }
-    componentDidMount() {
-        this.resize()
-    }
+
     render() {
         return (
             <div className={styles.wrap} style={{ 'minHeight': this.state.height, marginLeft: this.props.Setting.getCollaps ? '80px' : '250px' }}>

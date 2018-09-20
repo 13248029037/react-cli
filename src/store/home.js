@@ -1,7 +1,5 @@
 import { observable, computed, action } from "mobx";
 
-
-
 class Store {
     // 利用
     @observable data = {
@@ -30,6 +28,3 @@ class Store {
 }
 
 export default new Store()
-
-
-

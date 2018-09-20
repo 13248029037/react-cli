@@ -2,9 +2,6 @@ import Bundle from '@/components/Bundle';
 import React from 'react'
 import Main from 'bundle-loader?name=[name].lazy!./container/channel/Main.js';
 import order_Main from 'bundle-loader?name=[name].lazy!./container/order/Main.js';
-import Sub from 'bundle-loader?name=[name].lazy!./container/channel/Sub.js';
-import History from 'bundle-loader?name=[name].lazy!./container/channel/History.js';
-
 
 //开发环境
 export let env = process.env.NODE_ENV || 'development'
@@ -65,8 +62,6 @@ const config = [
             }
         ]
     }
-
-
 ]
 
 export default config;

@@ -4,8 +4,6 @@ import axios from 'axios';
 import VM from '@/utils/init'
 axios.defaults.withCredentials = true; //默认带取cookie
 
-
-
 //api接口
 const API = {
 
@@ -99,7 +97,6 @@ http.interceptors.response.use(res => {
 
 });
 
-
 const ajax = {
     get(args) {
         let { url, data, callback, options, params } = args;
@@ -107,6 +104,8 @@ const ajax = {
             url: url,
             method: 'get',
             params,
+            data:JSON.stringify(data),
+            options
         }).then(result => {
             callback && callback(null, result)
             return result;
@@ -122,6 +121,7 @@ const ajax = {
         return http.request({
             url: url,
             method: 'post',
+            options,
             data: JSON.stringify(data),
             params: JSON.stringify(params),
         }).then(result => {
@@ -135,7 +135,7 @@ const ajax = {
         })
     },
     postFile(args) {
-        let { url, data, callback, options, params } = args;
+        let { url, data, callback} = args;
         return http.request({
             url: url,
             method: 'post',
@@ -160,7 +160,3 @@ API.getFoundationData = (args) => {
 }
 
 export default API;
-
-
-
-

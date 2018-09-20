@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
-import PropTypes from "prop-types";
 import { Select } from 'antd';
 const Option  = Select.Option;
 @inject('Setting')
 @observer
 export default class Home extends Component {
 
-    // static contextTypes = {
-    //     router: PropTypes.object.isRequired
-    // }
     constructor(props) {
         super(props)
         console.info(props,'hhhhhhhhhhhhhhh')
@@ -34,7 +30,6 @@ export default class Home extends Component {
     handleClick() {
         this.props.history.push('/channel_main')
     }
-   
 
     handleChange(value) {
         console.log(`selected ${value}`);
@@ -47,7 +42,6 @@ export default class Home extends Component {
     handleFocus() {
         console.log('focus');
     }
-
 
     render() {
         return (

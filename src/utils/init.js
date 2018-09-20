@@ -25,6 +25,13 @@ Component.prototype.showTip = (obj) => {
 
 }
 
+function removeLoading() {
+    if (loadings.length) {
+        document.body.removeChild(loadings[0]);
+        loadings = [];
+    }
+
+}
 
 function showLoading() {
     if (!loadings.length) {
@@ -38,15 +45,6 @@ function showLoading() {
         }, 5000)
     }
 }
-
-function removeLoading() {
-    if (loadings.length) {
-        document.body.removeChild(loadings[0]);
-        loadings = [];
-    }
-
-}
-
 export default {
     showLoading,
     removeLoading,

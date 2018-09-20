@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Icon, Button } from 'antd';
+import React from 'react'
+import { Icon} from 'antd';
 import styles from '../less/bread';
 import {inject,observer} from 'mobx-react'
  const Bread = inject('Setting')(observer((props) =>{
