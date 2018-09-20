@@ -1,0 +1,20 @@
+.ant-menu-vertical .ant-menu-item,.ant-menu-inline .ant-menu-item{
+    margin-top:0px !important;
+    margin-bottom:0px !important;
+}
+.ant-breadcrumb-separator {
+    
+    color:#eee;
+    font-size:20px;
+}
+.ant-spin-lg .ant-spin-dot {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+}
+body{
+    background-color: #f0f2f5;
+}

@@ -1,0 +1,95 @@
+.nav{
+    height:100;
+    width:250px;
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    background-color:#03152a;
+    transition:all .2s;
+    z-index:100
+
+}
+.navCollaps{
+    height:100;
+    width:80px;
+    position:fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    background-color:#001529;
+    transition:all .2s;
+}
+.header{
+    color:#fff;
+    height:60px;
+    line-height: 60px;
+    background-color:#062141;
+    box-shadow: 1px 1px  #062141; 
+    position: relative;
+    .logo{
+        display:inline-block;
+        text-align: center;
+        line-height: 60px;
+        height:100%;
+        width:80px;
+        font-size:16px;
+        transition: all .2s;
+        vertical-align: top;
+        
+    }
+    .title{
+        font-size:20px;
+        position: absolute;
+        top:0px;
+        vertical-align: top;
+    }
+
+}
+
+.person{
+    position: absolute;
+    bottom:0px;
+    left:10px;
+    right:10px;
+    height:80px;
+    color:#eee;
+    border-top:1px solid #888;
+    cursor: pointer;
+    
+    .pic{
+        display:inline-block;
+        font-size:40px;
+        text-align: center;
+        line-height:80px;
+        transition: all .2s;
+        width:60px;
+        height:100%;
+    }
+    .name{
+        display:inline-block;
+        text-align:left;
+        line-height:70px;
+        font-size:18px;
+        transition:all .3s;
+        width:120px;
+        height:100%;
+        margin-left:20px;
+    }
+    .button{
+        position: absolute;
+        color:#eee;
+        top:-30px;
+        width:180px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px 1px #5e5c72;
+        height:40px;
+        font-size:18px;
+        line-height:40px;
+        background-color:#4b5463;
+        display: none;
+    }
+    &:hover .button{
+        display: block;
+    }
+}
