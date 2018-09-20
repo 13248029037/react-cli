@@ -7,11 +7,12 @@ const Option  = Select.Option;
 @observer
 export default class Home extends Component {
 
-    static contextTypes = {
-        router: PropTypes.object.isRequired
-    }
+    // static contextTypes = {
+    //     router: PropTypes.object.isRequired
+    // }
     constructor(props) {
         super(props)
+        console.info(props,'hhhhhhhhhhhhhhh')
         this.handleClick = this.handleClick.bind(this)
         this.state ={
             arr:[
@@ -31,7 +32,7 @@ export default class Home extends Component {
         }
     }
     handleClick() {
-
+        this.props.history.push('/channel_main')
     }
    
 
@@ -67,7 +68,8 @@ export default class Home extends Component {
                 {
                     this.state.arr.map(item =>  <Option key={item.id} value={item.id}>{item.value}</Option>)
                 }
-                </Select>,
+                </Select>
+                <div onClick={this.handleClick}>dianji</div>
             </div>
         )
     }

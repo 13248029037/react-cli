@@ -13,16 +13,17 @@ export default class RouterView extends Component {
             <Router>
                 <div>
                     <Nav config={config}></Nav>
-                    <Header></Header>          
+                    <Header></Header>
                     <Switch>
-                            <Layout>
-                                    {route.map(item => <Route state={item.state} key={item.id} label={item.label} path={item.path} component={item.component}></Route>)}
-                                    <Redirect from="*" to="/channel_main"></Redirect>
-                            </Layout>
+                        <Layout>
+                            <Switch>
+                                {route.map(item => <Route state={item.state} key={item.id} label={item.label} path={item.path} component={item.component}></Route>)}
+                                <Redirect to="/channel_main"></Redirect>
+                            </Switch>
+                        </Layout>
                     </Switch>
                 </div>
             </Router>
         )
     }
-
 }

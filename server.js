@@ -1,27 +1,3 @@
-// Javascript require hook
-require('babel-register')({
-    presets: ['es2015', 'react', 'stage-0'],
-    plugins: ['add-module-exports']
-})
-
-// Css require hook
-require('css-modules-require-hook')({
-    extensions: ['.less'],
-    preprocessCss: (data, filename) =>
-        require('node-sass').renderSync({
-            data,
-            file: filename
-        }).css,
-    camelCase: true,
-    generateScopedName: '[name]__[local]__[hash:base64:8]'
-})
-
-// Image require hook
-require('asset-require-hook')({
-    name: '/[hash].[ext]',
-    extensions: ['jpg', 'png', 'gif', 'webp'],
-    limit: 8000
-})
 
 
 
