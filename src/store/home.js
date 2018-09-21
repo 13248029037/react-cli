@@ -12,7 +12,7 @@ class Store {
     }
 
     @action.bound setTodos() {
-        new Promise((resolve, reject) => {
+        new Promise((resolve) => {
             setTimeout(function () {
                 resolve(Math.floor(Math.random() * 100000))
             }, 3000)
