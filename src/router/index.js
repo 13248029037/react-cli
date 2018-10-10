@@ -18,7 +18,7 @@ export default class RouterView extends Component {
                         <Layout>
                             <Switch>
                                 {route.map(item => <Route state={item.state} key={item.id} label={item.label} path={item.path} component={item.component}></Route>)}
-                                <Redirect to="/channel_main"></Redirect>
+                                <Redirect to="/channel/main"></Redirect>
                             </Switch>
                         </Layout>
                     </Switch>

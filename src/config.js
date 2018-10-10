@@ -5,7 +5,6 @@ import order_Main from 'bundle-loader?name=[name].lazy!./container/order/Main.js
 
 //开发环境
 export let env = process.env.NODE_ENV || 'development'
-
 //异步组件
 const createComponent = (component) => (props) => (
     <Bundle load={component}>
@@ -20,14 +19,14 @@ export const route = [
     {
         id: 1,
         label: '1-1',
-        path: '/channel_main',
+        path: '/channel/main',
         state:'xiaoshulin',
         component: createComponent(Main)
     },
     {
         id: 2,
         label: '2-1',
-        path: '/order_main',
+        path: '/order/main',
         state:'gggg',
         component: createComponent(order_Main)
     }
@@ -42,7 +41,7 @@ const config = [
             {
                 id: '1-1',
                 name: '渠道信息列表',
-                path: '/channel_main',
+                path: '/channel/main',
                 show: true,
                 exact: true
             }
@@ -56,7 +55,7 @@ const config = [
             {
                 id: '2-1',
                 name: '订单管理A',
-                path: '/order_main',
+                path: '/order/main',
                 show: true,
                 exact: true
             }

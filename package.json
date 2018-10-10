@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "  webpack-dev-server  --hot --inline  --config  webpack-dev-config.js",
-    "pro": " webpack --progress --config webpack-pro-config.js",
+    "pro": "cross-env NODE_ENV=production44 webpack --progress --config webpack-pro-config.js",
     "server": "next"
   },
   "keywords": [

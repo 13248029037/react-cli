@@ -38,7 +38,7 @@ export default class Home extends Component {
         console.info(this.Dom, 'DomDomDomDomDomDomDom')
         this.Dom.eat();
     }
-    handleClick(ee,rrr) {
+    handleClick(ee, rrr) {
         console.info(this)
         console.info(ee)
         console.info(ee.target)
@@ -72,9 +72,9 @@ export default class Home extends Component {
                                 <span key={item.id} style={{ padding: '20px', margin: '10px' }}>{item.name}</span>)
                         }
                     </div>
-                    <div onClick={(event) =>{this.handleClick(event,55)}}>dianjttttttttti</div>
+                    <div onClick={(event) => { this.handleClick(event, 55) }}>dian</div>
                 </div>
-                <Child >
+                <Child>
                     <Consumer>
                         {(context) => (
                             <div>
@@ -85,8 +85,11 @@ export default class Home extends Component {
                     </Consumer>
                 </Child>
                 <Father ref={(Dom) => { this.Dom = Dom }}></Father>
+                <div>{this.props.Channel.getState}</div>
+                <span onClick={() => this.props.Channel.addStage()}>点击</span>
             </Provider>
 
         )
     }
 }
+
